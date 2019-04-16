@@ -22,8 +22,8 @@ jobs:
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_PUBLISH_TOKEN" >> ~/.npmrc
       - run: npm version --no-git-tag-version $CIRCLE_TAG --prefix consumer/
       - run: npm version --no-git-tag-version $CIRCLE_TAG --prefix publisher/
-      - run: npm publish --prefix consumer/
-      - run: npm publish --prefix publisher/
+      - run: cd consumer && npm publish
+      - run: cd publisher && npm publish
 
 workflows:
   version: 2
