@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Publish alerts to Slack via SNS",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "jest"
   },
