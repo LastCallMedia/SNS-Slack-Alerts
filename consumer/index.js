@@ -18,6 +18,10 @@ class SNSSlackFormatter {
             }
         }
 
+        if(message.hasOwnProperty('AlarmName')) {
+            return reformatCloudwatch(message)
+        }
+
         return message
     }
     parse(message) {
@@ -31,6 +35,17 @@ class SNSSlackFormatter {
             return message
         }
     }
+}
+
+function reformatCloudwatch(message) {
+    let text = `*${message.AlarmName}*`
+    if(message.hasOwnProperty('AlarmDescription') && typeof message.AlarmDescription === 'string') {
+        text += "\n" + message.AlarmDescription
+    }
+    else if (message.hasOwnProperty('NewStateReason') && typeof message.NewStateReason === 'string') {
+        text += "\n" + message.NewStateReason
+    }
+    return { text }
 }
 
 class FormatterChannelDecorator {

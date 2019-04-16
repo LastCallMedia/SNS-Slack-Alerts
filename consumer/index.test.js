@@ -3,6 +3,7 @@ const {SNSSlackFormatter, FormatterChannelDecorator} = require('./');
 
 const simple = require('./__fixtures__/simple.json');
 const preformatted = require('./__fixtures__/preformatted.json');
+const cloudwatch = require('./__fixtures__/cloudwatch.json');
 
 describe('SNSSlackFormatter', function () {
     it('Should accept a simple string as a message', function() {
@@ -26,7 +27,15 @@ describe('SNSSlackFormatter', function () {
         const formatter = new SNSSlackFormatter();
         const message = formatter.format(preformatted);
         expect(message).toEqual(JSON.parse(preformatted.Sns.Message))
-    })
+    });
+
+    it('Should reformat Cloudwatch alerts into a more readable message', function() {
+        const formatter = new SNSSlackFormatter();
+        const message = formatter.format(cloudwatch);
+        expect(message).toEqual({
+            text: "*Example alarm name*\nExample alarm description."
+        });
+    });
 });
 
 describe('FormatterChannelDecorator', function() {
