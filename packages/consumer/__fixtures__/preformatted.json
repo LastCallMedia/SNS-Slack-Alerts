@@ -1,0 +1,14 @@
+{
+  "EventSource": "aws:sns",
+  "EventVersion": "1.0",
+  "EventSubscriptionArn": "arn:aws:sns:us-east-1:1234:test-topic:23e66606-bb65-4164-8974-df56d37ac66b",
+  "Sns": {
+    "Type": "Notification",
+    "MessageId": "4a29160e-8f7f-569b-a8c0-433e8dfd37f9",
+    "TopicArn": "arn:aws:sns:us-east-1:1234:test-topic",
+    "Subject": "Some failure occurred",
+    "Message": "{\"attachments\":[{\"text\":\"Message\",\"fallback\":\"Message\",\"actions\":[{\"type\":\"button\",\"text\":\"Test\",\"url\":\"https://google.com\"}],\"footer\":\"bar\",\"ts\":1530518207.007}]}",
+    "Timestamp": "2019-04-16T16:18:10.750Z",
+    "MessageAttributes": {}
+  }
+}

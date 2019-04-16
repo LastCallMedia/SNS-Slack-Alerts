@@ -1,0 +1,19 @@
+{
+  "name": "@lastcall/sns-slack-alerts-publisher",
+  "version": "0.0.0",
+  "description": "Publish alerts to Slack via SNS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": {
+    "name": "Rob Bayliss",
+    "email": "rob@lastcallmedia.com",
+    "url": "https://lastcallmedia.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "aws-sdk": "^2.437.0",
+    "jest": "^24.7.1"
+  }
+}

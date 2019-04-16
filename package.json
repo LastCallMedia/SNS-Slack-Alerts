@@ -1,0 +1,15 @@
+{
+  "name": "@lastcall/sns-slack-alerts",
+  "version": "0.0.0",
+  "description": "Publish alerts to Slack via SNS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "lerna": "^3.13.2"
+  }
+}

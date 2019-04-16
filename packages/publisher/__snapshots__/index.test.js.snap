@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlertFactory Should create a formatted SNS message 1`] = `
+Object {
+  "Message": "{\\"default\\":\\"Message\\",\\"lambda\\":\\"{\\\\\\"attachments\\\\\\":[{\\\\\\"text\\\\\\":\\\\\\"Message\\\\\\",\\\\\\"fallback\\\\\\":\\\\\\"Message\\\\\\",\\\\\\"actions\\\\\\":[],\\\\\\"footer\\\\\\":\\\\\\"bar\\\\\\",\\\\\\"ts\\\\\\":1530518207.007}]}\\"}",
+  "MessageStructure": "json",
+  "Subject": "Subject",
+}
+`;
+
+exports[`AlertFactory Should create a formatted Slack message 1`] = `
+Object {
+  "attachments": Array [
+    Object {
+      "actions": Array [
+        Object {
+          "text": "Test",
+          "type": "button",
+          "url": "https://google.com",
+        },
+      ],
+      "fallback": "Message",
+      "footer": "bar",
+      "text": "Message",
+      "ts": 1530518207.007,
+    },
+  ],
+}
+`;

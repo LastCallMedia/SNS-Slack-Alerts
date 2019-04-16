@@ -1,0 +1,22 @@
+{
+  "name": "@lastcall/sns-slack-alerts-consumer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Rob Bayliss",
+    "email": "rob@lastcallmedia.com",
+    "url": "https://lastcallmedia.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "aws-sdk": "^2.437.0",
+    "jest": "^24.7.1"
+  },
+  "dependencies": {
+    "@slack/client": "^5.0.0"
+  }
+}
