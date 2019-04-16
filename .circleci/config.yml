@@ -17,4 +17,4 @@ jobs:
           paths: [node_modules]
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: node_modules/.bin/lerna bootstrap
-      - run: node_modules/.bin/lerna exec test
+      - run: node_modules/.bin/lerna exec jest
