@@ -2,7 +2,7 @@
 
 exports[`AlertFactory Should create a formatted SNS message 1`] = `
 Object {
-  "Message": "{\\"default\\":\\"Message\\",\\"lambda\\":\\"{\\\\\\"attachments\\\\\\":[{\\\\\\"text\\\\\\":\\\\\\"Message\\\\\\",\\\\\\"fallback\\\\\\":\\\\\\"Message\\\\\\",\\\\\\"actions\\\\\\":[],\\\\\\"footer\\\\\\":\\\\\\"bar\\\\\\",\\\\\\"ts\\\\\\":1530518207.007}]}\\"}",
+  "Message": "{\\"default\\":\\"Message\\",\\"lambda\\":\\"{\\\\\\"text\\\\\\":\\\\\\"Subject\\\\\\",\\\\\\"attachments\\\\\\":[{\\\\\\"text\\\\\\":\\\\\\"Message\\\\\\",\\\\\\"fallback\\\\\\":\\\\\\"Message\\\\\\",\\\\\\"actions\\\\\\":[],\\\\\\"footer\\\\\\":\\\\\\"bar\\\\\\",\\\\\\"ts\\\\\\":1530518207.007}]}\\"}",
   "MessageStructure": "json",
   "Subject": "Subject",
 }
@@ -25,5 +25,6 @@ Object {
       "ts": 1530518207.007,
     },
   ],
+  "text": "Subject",
 }
 `;

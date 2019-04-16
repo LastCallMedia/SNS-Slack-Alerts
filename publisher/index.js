@@ -36,6 +36,7 @@ class Alert {
     }
     formatSlack() {
         return {
+            text: this.subject,
             attachments: [{
                 text: this.message,
                 fallback: this.message,
