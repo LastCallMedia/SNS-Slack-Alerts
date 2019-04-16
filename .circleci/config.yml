@@ -32,7 +32,7 @@ jobs:
             - v1-dependencies-
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_PUBLISH_TOKEN" >> ~/.npmrc
       - run: npm install
-      - run: lerna publish from-git
+      - run: node_modules/.bin/lerna publish from-git
 
 workflows:
   version: 2
