@@ -90,7 +90,7 @@ class SNSSlackPublisher {
     }
     publish(snsMessage) {
         const slackMessage = this.formatter.format(snsMessage);
-        return this.client.postMessage(slackMessage)
+        return this.client.chat.postMessage(slackMessage)
     }
 }
 
