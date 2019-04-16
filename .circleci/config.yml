@@ -12,7 +12,7 @@ jobs:
             - v1-dependencies-{{ checksum "package-lock.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run: npm install
+      - run: npm ci
       - save_cache:
           paths: [node_modules]
           key: v1-dependencies-{{ checksum "package.json" }}
@@ -31,7 +31,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_PUBLISH_TOKEN" >> ~/.npmrc
-      - run: npm install
+      - run: npm ci
       - run: node_modules/.bin/lerna publish from-git
 
 workflows:
