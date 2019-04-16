@@ -18,6 +18,8 @@ class SNSSlackFormatter {
             }
         }
 
+        // Cloudwatch alerts may be published directly to the Lambda - reformat
+        // those accordingly.
         if(message.hasOwnProperty('AlarmName')) {
             return reformatCloudwatch(message)
         }
