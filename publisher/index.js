@@ -17,8 +17,8 @@ class AlertFactory {
     createLambda(subject, message, context) {
         const {AWS_REGION} = process.env;
         const alert = this.create(subject, message)
-        alert.addLink('View logs', `https://console.aws.amazon.com/cloudwatch/home?region=${AWS_REGION}#logEventViewer:group=${context.logGroupName};stream=${context.logStreamName};start=${new Date()}`)
-        alert.addLink('View metrics', `https://console.aws.amazon.com/lambda/home?region=${AWS_REGION}#/functions/${context.functionName}/versions/${context.functionVersion}?tab=monitoring`)
+        alert.addLink('View logs', `https://console.aws.amazon.com/cloudwatch/home?region=${AWS_REGION}#logEventViewer:group=${context.logGroupName};stream=${context.logStreamName};start=${new Date()}`, 'logs')
+        alert.addLink('View monitoring', `https://console.aws.amazon.com/lambda/home?region=${AWS_REGION}#/functions/${context.functionName}/versions/${context.functionVersion}?tab=monitoring`, 'monitoring')
         return alert
     }
 }
@@ -31,8 +31,11 @@ class Alert {
         this.message = message
         this.links = []
     }
-    addLink(text, url) {
-        this.links.push({type: 'button', text, url})
+    addLink(text, url, name) {
+        if(typeof name === "undefined") {
+            name = 'action_' + (this.links.length);
+        }
+        this.links.push({type: 'button', text, url, name})
     }
     formatSlack() {
         return {
