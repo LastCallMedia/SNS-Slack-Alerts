@@ -1,7 +1,7 @@
 SNS Slack Alerts
 ================
 
-This repository contains two NPM packages for dealing with publishing Slack alerts in Lambda.  We believe that AWS infrastructure alerts should be routed through SNS for two reasons:
+SNS Slack Alerts is brought to you by your friends at [Last Call Media](https://www.lastcallmedia.com), this repository contains two NPM packages for dealing with publishing Slack alerts in Lambda.  We believe that AWS infrastructure alerts should be routed through SNS for two reasons:
 
 1. To keep Slack credentials from being exposed throughout your infrastructure.
 2. To allow publishing from places other than NodeJS code (eg: Cloudwatch alarms).
